@@ -94,6 +94,10 @@
       {
         "name": "Jurgen Heine",
         "email": "jurgen2.heine@gmail.com"
+      },
+      {
+        "name": "Morris Haid",
+        "email": "mhaid2016@outlook.com"
       }
     ]
   },
@@ -325,20 +329,6 @@
         "title": {
           "en": "Close",
           "de": "Schließen"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=curtain_module"
-          }
-        ]
-      },
-      {
-        "id": "move_stop",
-        "title": {
-          "en": "Stop",
-          "de": "Stoppen"
         },
         "args": [
           {
@@ -4245,7 +4235,7 @@
       ]
     },
     {
-      "id": "slim-motion-sensor",
+      "id": "slim_motion_sensor",
       "name": {
         "en": "Slim motion sensor"
       },
@@ -4266,8 +4256,8 @@
         ]
       },
       "images": {
-        "large": "/drivers/slim-motion-sensor/assets/images/large.png",
-        "small": "/drivers/slim-motion-sensor/assets/images/small.png"
+        "large": "/drivers/slim_motion_sensor/assets/images/large.png",
+        "small": "/drivers/slim_motion_sensor/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": [
@@ -4291,7 +4281,7 @@
           }
         },
         "learnmode": {
-          "image": "/drivers/slim-motion-sensor/assets/learn.svg",
+          "image": "/drivers/slim_motion_sensor/assets/learn.svg",
           "instruction": {
             "en": "Press the reset button for aprox 5 seconds until the LED blinks."
           }
