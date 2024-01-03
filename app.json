@@ -2369,6 +2369,152 @@
       }
     },
     {
+      "id": "lcd_th_sensor",
+      "name": {
+        "en": "LCD T&H Sensor"
+      },
+      "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "measure_temperature",
+        "measure_humidity",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA",
+          "AAA"
+        ]
+      },
+      "images": {
+        "large": "/drivers/lcd_th_sensor/assets/images/large.png",
+        "small": "/drivers/lcd_th_sensor/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "_TZE200_locansqn"
+        ],
+        "productId": [
+          "TS0601"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              5,
+              10,
+              25,
+              61184
+            ],
+            "bindings": [
+              4,
+              5,
+              10,
+              25,
+              61184
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Press the button on the side of the unit for 5 seconds."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "temperature_sensitivity",
+          "type": "number",
+          "label": {
+            "en": "Temperature sensitivity (0.X°C)"
+          },
+          "hint": {
+            "en": "Set temperature sensitivity. step size decimal [°C]"
+          },
+          "value": 3,
+          "attr": {
+            "min": 3,
+            "max": 10,
+            "step": 1
+          }
+        },
+        {
+          "id": "temp_periodic_report",
+          "type": "number",
+          "label": {
+            "en": "Temperature reporting interval in minutes"
+          },
+          "value": 1,
+          "attr": {
+            "min": 1,
+            "max": 120,
+            "step": 1
+          }
+        },
+        {
+          "id": "humidity_sensitivity",
+          "type": "number",
+          "label": {
+            "en": "Humidity sensitivity"
+          },
+          "hint": {
+            "en": "Set humidity sensitivity. default [6%]"
+          },
+          "value": 6,
+          "attr": {
+            "min": 3,
+            "max": 10,
+            "step": 1
+          },
+          "units": {
+            "en": "%"
+          }
+        },
+        {
+          "id": "hum_periodic_report",
+          "type": "number",
+          "label": {
+            "en": "Humidity reporting interval in minutes"
+          },
+          "value": 1,
+          "attr": {
+            "min": 1,
+            "max": 120,
+            "step": 1
+          }
+        },
+        {
+          "id": "temp_unit_convert",
+          "type": "dropdown",
+          "value": "c",
+          "label": {
+            "en": "Celsius / Fahrenheit"
+          },
+          "values": [
+            {
+              "id": "c",
+              "label": {
+                "en": "Celsius"
+              }
+            },
+            {
+              "id": "f",
+              "label": {
+                "en": "Fahrenheit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "lcdtemphumidluxsensor",
       "name": {
         "en": "LCD Temperature, Humidity and Luminance Sensor"
@@ -2846,8 +2992,7 @@
       "zigbee": {
         "manufacturerName": [
           "_TZE200_bjawzodf",
-          "_TZE200_zl1kmjqx",
-          "_TZE200_locansqn"
+          "_TZE200_zl1kmjqx"
         ],
         "productId": [
           "TS0601"
